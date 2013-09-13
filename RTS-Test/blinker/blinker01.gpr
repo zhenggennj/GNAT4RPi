@@ -1,0 +1,22 @@
+project Blinker01 is
+
+   for Languages use ("Ada", "C", "Asm", "Asm2", "Asm_Cpp");
+   for Source_Dirs use (".", "..\..\RTS\drivers\**", "..\..\RTS\ravenscar", "..\..\RTS\rts-raven\adainclude");
+   for Main use ("blinker01.adb");
+
+   package Naming is
+      for Spec_Suffix ("c") use ".h";
+      for Body_Suffix ("c") use ".c";
+      for Body_Suffix ("asm") use ".s";
+   end Naming;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-gnatpg");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-g");
+   end Compiler;
+
+end Blinker01;
+

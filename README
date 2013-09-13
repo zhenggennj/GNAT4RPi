@@ -1,0 +1,4 @@
+The project is aimed to port GNAT for MINDSTROMS NXT-Ravenscar edition to Raspberry Pi.
+The port is done. Some examples based on Ravenscar profiles are provided and can be compiled and
+ run on Pi smoothly. At present stage, only drivers for GPIO, mini_uart, sound playing by PWM and a
+ system timer are finished, other drivers will come soon.
